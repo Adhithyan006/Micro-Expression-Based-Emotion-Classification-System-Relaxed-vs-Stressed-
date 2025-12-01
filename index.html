@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Micro-Expression Based Emotion Classification System (Relaxed vs Stressed) (Demo)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Micro-Expression Based Emotion Classification System (Relaxed vs Stressed)</h1>
+    <p class="hint">Upload a face image → browser will compare it to sample dataset images and give a prediction.</p>
+
+    <div class="controls">
+      <input id="fileInput" type="file" accept="image/*" />
+      <select id="mode">
+        <option value="match">Dataset-matching (recommended)</option>
+        <option value="filename">Filename heuristic (if named)</option>
+        <option value="random">Random demo</option>
+      </select>
+      <button id="analyzeBtn">Analyze</button>
+    </div>
+
+    <div class="previewRow">
+      <div class="panel">
+        <h3>Uploaded image</h3>
+        <img id="preview" alt="preview" />
+      </div>
+    </div>
+
+    <div id="result" class="result">Prediction: —</div>
+
+    <div class="footer">
+      <small>Place small sample images in <code>dataset/relaxed/</code> and <code>dataset/stressed/</code>.</small>
+      <br/>
+      <small>Serve files with a local HTTP server (instructions below).</small>
+    </div>
+  </div>
+
+  <!-- hidden canvas used for image processing -->
+  <canvas id="procCanvas" width="32" height="32" style="display:none"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+:root{
+  --bg:#f3f7fb;
+  --card:#ffffff;
+  --accent:#0d47a1;
+  --green:#2e7d32;
+  --red:#c62828;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:20px;
+}
+.card{
+  width:900px;
+  max-width:95%;
+  background:var(--card);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(15,30,60,0.08);
+}
+h1{margin:4px 0 8px; color:var(--accent)}
+.hint{color:#556; margin-bottom:12px}
+.controls{display:flex;gap:8px; align-items:center; margin-bottom:14px; flex-wrap:wrap}
+.controls input[type=file]{flex:1}
+.controls select, .controls button{padding:8px 12px; border-radius:8px; border:1px solid #ddd; background:#fff; cursor:pointer}
+.previewRow{display:flex; gap:14px; margin-top:8px; flex-wrap:wrap}
+.panel{flex:1; min-width:220px; background:#fbfdff; padding:12px; border-radius:8px; text-align:center; border:1px solid #f0f6ff}
+.panel h3{margin:6px 0 10px; font-size:14px; color:#333}
+.panel img{width:100%; max-width:260px; height:200px; object-fit:cover; border-radius:6px; background:#eee; display:block; margin:0 auto}
+.sampleLabel{margin-top:8px; font-weight:700; color:#444}
+.result{margin-top:14px; font-size:18px; font-weight:700; color:var(--accent)}
+.footer{margin-top:12px; color:#666; font-size:13px}
